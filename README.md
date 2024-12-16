@@ -19,25 +19,40 @@ SentinelAI-IPS is an Intrusion Prevention System designed to detect and prevent 
 
 1. Prerequisites
 
-- Python 3.8 or later
+  - Python 3.8 or later
 
-- pip (Python package installer)
+  - pip (Python package installer)
 
 2. Installation
 
-- Clone the repository:
-```
-git clone https://github.com/Nikosane/SentinelAI-IPS.git
-cd SentinelAI-IPS
-```
+  - Clone the repository:
+  ```
+  git clone https://github.com/Nikosane/SentinelAI-IPS.git
+  cd SentinelAI-IPS
+  ```
 
 3. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 4. Set up the dataset:
 
-- Place raw network traffic data in `data/raw_network_data.csv`.
+  - Place raw network traffic data in `data/raw_network_data.csv`.
 
-- Use the `src/feature_extractor.py` script to preprocess the data and save it as `data/processed_data.csv`.
+  - Use the `src/feature_extractor.py` script to preprocess the data and save it as `data/processed_data.csv`.
+
+## Running the System
+
+1. Train the models:
+
+  - Run `src/model_trainer.py` to train the anomaly detection and attack classification models.
+
+  - Start the Intrusion Prevention System:
+
+2. Execute the main entry point:
+  ```
+  python main.py
+  ```
+3. Monitor Logs:
+  - Detected threats will be logged in `logs/intrusion_logs.txt`.
